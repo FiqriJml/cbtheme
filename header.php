@@ -39,4 +39,14 @@
             );
             ?>
         </nav><!-- .main-navigation -->
+
+        <div class="header-buttons">
+            <button class="language-switcher">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/united-kingdom.png" alt="EN" />
+                <span>EN</span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <button class="sign-in">Sign In</button>
+            <button class="get-started">Get Started</button>
+        </div><!-- .header-buttons -->
     </header><!-- .site-header -->

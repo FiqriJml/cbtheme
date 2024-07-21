@@ -14,7 +14,7 @@ const paths = config.paths;
 
 // Sass Task
 function scssTask() {
-    return src(paths.scss, { sourcemaps: true })
+    return src(paths.scss + '/*.scss', { sourcemaps: true })
         .pipe(concat('theme.scss')) // Menggabungkan semua file SCSS menjadi satu
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('theme.css')) // Output theme.css
@@ -26,7 +26,7 @@ function scssTask() {
 
 // Javascript Task
 function jsTask() {
-    return src(paths.js, { sourcemaps: true })
+    return src(paths.js + '/*.js', { sourcemaps: true })
         .pipe(concat('theme.js')) // Menggabungkan semua file JS menjadi satu
         .pipe(terser())
         .on('error', function (err) { console.error('Error in jsTask', err.toString()); this.emit('end'); }) // Handle error
@@ -52,7 +52,7 @@ function browsersyncReload(cb) {
 // Watch Task
 function watchTask() {
     watch('*.php', browsersyncReload); // Reload saat file PHP berubah
-    watch([paths.scss, paths.js], series(scssTask, jsTask, browsersyncReload));
+    watch([paths.scss + '/**/*.scss', paths.js + '/**/*.js'], series(scssTask, jsTask, browsersyncReload));
 }
 
 // Default Gulp task

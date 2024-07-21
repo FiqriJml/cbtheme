@@ -1,7 +1,7 @@
 {
     "paths": {
-        "scss": "assets/sass/*.scss",
-        "js": "assets/js/**/*.js",
+        "scss": "assets/sass",
+        "js": "assets/js",
         "cssDest": "dist/css",
         "jsDest": "dist/js"
     },

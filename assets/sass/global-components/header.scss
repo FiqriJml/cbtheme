@@ -6,20 +6,20 @@
 .site-header {
     background-color: $dark;
     color: white;
-    padding: 4rem;
+    padding: 1rem;
     display: flex;
-    justify-content: center; // Center all items horizontally
-    align-items: center; // Center all items vertically
+    align-items: center; // Center items vertically
     position: relative; // For positioning submenu
+    width: 100%; // Ensure header spans full width
 
     .site-branding {
         margin-right: auto; // Pushes the site branding to the left
-        margin-left: auto; // Centers the site branding
     }
 
     .main-navigation {
-        margin-left: auto; // Pushes the menu to the right
-        margin-right: auto; // Centers the menu
+        display: flex;
+        justify-content: center; // Center the navigation menu horizontally
+        flex-grow: 1; // Allow the menu to take available space
 
         #primary-menu {
             list-style: none;
@@ -35,10 +35,11 @@
                     text-decoration: none;
                     color: #fff;
                     padding: 0.5rem 1rem;
-                    transition: background-color 0.3s;
+                    transition: background-color 0.3s, color 0.3s; // Transition for color change
 
                     &:hover {
-                        background-color: #555;
+                        // background-color: #555;
+                        color: $pink; // Change text color on hover
                     }
                 }
 
@@ -64,7 +65,8 @@
                             display: block;
 
                             &:hover {
-                                background-color: #777;
+                                // background-color: #777;
+                                color: $pink; // Change text color on hover
                             }
                         }
                     }
@@ -73,6 +75,55 @@
                 &:hover > ul {
                     display: block; // Show submenu on hover
                 }
+            }
+        }
+    }
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto; // Pushes buttons to the right
+
+        button {
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            cursor: pointer;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #555;
+            }
+
+            &.language-switcher {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 1.5rem;
+                    height: auto;
+                    margin-right: 0.5rem;
+                }
+
+                i {
+                    margin-left: 0.5rem;
+                }
+            }
+
+            &.sign-in {
+                font-family: 'Chillax', sans-serif;
+            }
+
+            &.get-started {
+                font-family: 'Chillax', sans-serif;
+                background-color: $gold;
+                color: black;
+                border-radius: 20rem;
+                padding: .75rem 1.2rem;
             }
         }
     }
@@ -110,6 +161,15 @@
                         padding: 1rem;
                     }
                 }
+            }
+        }
+
+        .header-buttons {
+            margin-top: 1rem;
+            justify-content: center;
+
+            button {
+                margin: 0.5rem 0;
             }
         }
     }
