@@ -1,6 +1,48 @@
 /**********************************/
 /*        LAYOUT STYLES           */
 /**********************************/
+* {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: #ffffff;
+}
+
+html.freeze {
+  overflow-y: hidden;
+}
+
+body.freeze {
+  height: 100%;
+  position: fixed;
+  overflow-y: hidden;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
 /**********************************/
 /*    GLOBAL COMPONENT STYLES     */
 /**********************************/
@@ -67,104 +109,3 @@
 /**********************************/
 /*        COMPONENT STYLES        */
 /**********************************/
-.site-header {
-  background-color: #121316;
-  color: #fff;
-  padding: 1rem;
-}
-.site-header .site-branding {
-  float: left;
-}
-.site-header .site-branding .site-title {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #fff;
-}
-.site-header .main-navigation {
-  float: right;
-}
-.site-header .main-navigation #primary-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.site-header .main-navigation #primary-menu li {
-  margin-left: 1rem;
-}
-.site-header .main-navigation #primary-menu li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s;
-}
-.site-header .main-navigation #primary-menu li a:hover {
-  background-color: #555;
-}
-.site-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media (max-width: 768px) {
-  .site-header .site-branding {
-    float: none;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .site-header .main-navigation {
-    float: none;
-    text-align: center;
-  }
-  .site-header .main-navigation #primary-menu {
-    flex-direction: column;
-  }
-  .site-header .main-navigation #primary-menu li {
-    margin: 0;
-  }
-  .site-header .main-navigation #primary-menu li a {
-    padding: 1rem;
-  }
-}
-* {
-  box-sizing: border-box;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-button {
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-html {
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 100%;
-}
-
-body {
-  overflow: hidden;
-  background: #ffffff;
-}
-
-html.freeze {
-  overflow-y: hidden;
-}
-
-body.freeze {
-  height: 100%;
-  position: fixed;
-  overflow-y: hidden;
-  top: 0;
-  width: 100%;
-  left: 0;
-}
-
-body {
-  width: 100%;
-  margin: 0;
-}

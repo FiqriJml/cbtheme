@@ -1,8 +1,9 @@
 // global-components/header.scss
 // import layout variables
+@import '../layout/variables.scss';
 .site-header {
     background-color: $dark;
-    color: #fff;
+    color: white;
     padding: 1rem;
 
     .site-branding {
