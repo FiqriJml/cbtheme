@@ -1,0 +1,11 @@
+{
+    "paths": {
+        "scss": "assets/sass/**/*.scss",
+        "js": "assets/js/**/*.js",
+        "cssDest": "dist/css",
+        "jsDest": "dist/js"
+    },
+    "browsersync": {
+        "proxy": "http://miicro2.test/"
+    }
+}
