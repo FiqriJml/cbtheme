@@ -48,7 +48,7 @@ body {
 /**********************************/
 .site-header {
   background-color: #121316;
-  color: #fff;
+  color: white;
   padding: 1rem;
 }
 .site-header .site-branding {
@@ -70,6 +70,7 @@ body {
 }
 .site-header .main-navigation #primary-menu li {
   margin-left: 1rem;
+  position: relative;
 }
 .site-header .main-navigation #primary-menu li a {
   text-decoration: none;
@@ -79,6 +80,30 @@ body {
 }
 .site-header .main-navigation #primary-menu li a:hover {
   background-color: #555;
+}
+.site-header .main-navigation #primary-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #121316;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.site-header .main-navigation #primary-menu li ul li {
+  margin-left: 0;
+}
+.site-header .main-navigation #primary-menu li ul li a {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: block;
+}
+.site-header .main-navigation #primary-menu li ul li a:hover {
+  background-color: #777;
+}
+.site-header .main-navigation #primary-menu li:hover > ul {
+  display: block;
 }
 .site-header::after {
   content: "";

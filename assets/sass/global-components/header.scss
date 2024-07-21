@@ -1,32 +1,35 @@
 // global-components/header.scss
+
 // import layout variables
 @import '../layout/variables.scss';
+
 .site-header {
     background-color: $dark;
     color: white;
-    padding: 1rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center; // Center all items horizontally
+    align-items: center; // Center all items vertically
+    position: relative; // For positioning submenu
 
     .site-branding {
-        float: left;
-
-        .site-title {
-            font-size: 1.5rem;
-            margin: 0;
-            color: #fff;
-        }
+        margin-right: auto; // Pushes the site branding to the left
+        margin-left: auto; // Centers the site branding
     }
 
     .main-navigation {
-        float: right;
+        margin-left: auto; // Pushes the menu to the right
+        margin-right: auto; // Centers the menu
 
         #primary-menu {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            align-items: center; // Center menu items vertically
 
             li {
-                margin-left: 1rem;
+                position: relative; // For positioning submenu
 
                 a {
                     text-decoration: none;
@@ -38,11 +41,43 @@
                         background-color: #555;
                     }
                 }
+
+                // Submenu styles
+                ul {
+                    display: none; // Hide submenu initially
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: $dark;
+                    padding: 0;
+                    list-style: none;
+                    margin: 0;
+                    z-index: 1000; // Ensure it is above other content
+                    width: max-content; // Ensure submenu is wide enough for content
+
+                    li {
+                        margin-left: 0;
+
+                        a {
+                            padding: 0.5rem 1rem;
+                            width: 100%;
+                            display: block;
+
+                            &:hover {
+                                background-color: #777;
+                            }
+                        }
+                    }
+                }
+
+                &:hover > ul {
+                    display: block; // Show submenu on hover
+                }
             }
         }
     }
 
-    // Clear floats
+    // Clear floats if using float-based layout
     &::after {
         content: "";
         display: table;
@@ -50,17 +85,19 @@
     }
 }
 
-// Responsif untuk layar kecil
+// Responsive styles for smaller screens
 @media (max-width: 768px) {
     .site-header {
+        flex-direction: column; // Stack items vertically
+
         .site-branding {
-            float: none;
+            margin: 0;
             text-align: center;
             margin-bottom: 1rem;
         }
 
         .main-navigation {
-            float: none;
+            margin: 0;
             text-align: center;
 
             #primary-menu {
