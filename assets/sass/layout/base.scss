@@ -1,41 +1,36 @@
-*{
+* {
     box-sizing: border-box;
     outline: none;
     padding: 0;
     margin: 0;
 }
 
-button{
+button {
     border: none;
     box-shadow: none;
     cursor: pointer;
 }
 
-html{
+html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
 }
-body{
+body {
     overflow: hidden;
     background: #ffffff;
+    min-height: 100vh;
 }
 
-html.freeze{
+html.freeze {
     overflow-y: hidden;
 }
 
-
-body.freeze{
+body.freeze {
     height: 100%;
     position: fixed;
     overflow-y: hidden;
     top: 0;
     width: 100%;
     left: 0;
-}
-
-body{
-    width: 100%;
-    margin: 0;
 }
