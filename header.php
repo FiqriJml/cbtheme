@@ -10,7 +10,23 @@
 <body <?php body_class(); ?>>
     <header class="site-header">
         <div class="site-branding">
-            <h1 class="site-title"><?php bloginfo('name'); ?></h1>
+            <a href="<?php echo home_url('/') ?>">
+                <?php
+                $logo_id = carbon_get_theme_option('header_logo');
+                if ($logo_id) {
+                    $logo_url = wp_get_attachment_url($logo_id);
+                    if ($logo_url) {
+                        echo '<img src="' . esc_url($logo_url) . '" alt="Logo">';
+                    } else {
+                        // Alternatif teks atau gambar jika logo belum diatur
+                        echo '<img src="' . get_template_directory_uri() . '/assets/images/default-logo.png" alt="Default Logo">';
+                    }
+                } else {
+                    // Alternatif teks atau gambar jika logo belum diatur
+                    echo '<img src="' . get_template_directory_uri() . '/assets/images/default-logo.png" alt="Default Logo">';
+                }
+                ?>
+            </a>
         </div><!-- .site-branding -->
 
         <nav class="main-navigation">

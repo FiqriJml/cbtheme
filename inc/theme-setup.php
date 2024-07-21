@@ -1,4 +1,11 @@
 <?php
+
+function crb_load()
+{
+    require_once get_template_directory() . '/vendor/autoload.php';
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+add_action('after_setup_theme', 'crb_load');
 // Fungsi untuk menambahkan dukungan title tag
 function mytheme_setup()
 {
