@@ -102,12 +102,37 @@ body.freeze {
 .site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu {
   display: none;
   position: absolute;
-  background-color: #121316;
+  background-color: #1f2126;
   list-style: none;
   padding: 0.5rem;
+  border-radius: 12px;
+  white-space: nowrap;
+  width: auto;
+  padding: 0;
 }
 .site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li {
   margin-left: 0;
+  font-size: 18px;
+  cursor: pointer;
+  border-bottom: solid 1px #393b44;
+  padding: 12px 20px;
+}
+.site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li a {
+  padding: 0;
+}
+.site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li:hover > a {
+  color: #f4a4ec;
+  transition: color 0.3s;
+}
+.site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li small {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+}
+.site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li:last-child {
+  border-bottom: none;
 }
 .site-header .header-desktop .main-navigation #primary-menu li:hover > ul.sub-menu {
   display: block;

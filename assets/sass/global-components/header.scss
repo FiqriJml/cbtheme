@@ -64,12 +64,38 @@
                     ul.sub-menu {
                         display: none;
                         position: absolute;
-                        background-color: $dark;
+                        background-color: $dark-gray;
                         list-style: none;
                         padding: 0.5rem;
+                        border-radius: 12px;
+                        white-space: nowrap; // Mencegah teks membungkus ke baris berikutnya
+                        width: auto; // Sesuaikan lebar dengan konten
+                        padding: 0;
 
                         li {
                             margin-left: 0;
+                            font-size: 18px;
+                            cursor: pointer;
+                            border-bottom: solid 1px #393b44;
+                            padding: 12px 20px;
+                            a {
+                                padding: 0;
+                            }
+                            &:hover > a {
+                                color: $pink;
+                                transition: color 0.3s;
+                            }
+
+                            small {
+                                display: block;
+                                margin: 0;
+                                font-size: 14px; // Adjust font size as needed
+                                color: #fff; // Adjust color as needed
+                                opacity: 0.5;
+                            }
+                            &:last-child {
+                                border-bottom: none; // Menghilangkan border-bottom pada item terakhir
+                            }
                         }
                     }
                     &:hover > ul.sub-menu {

@@ -9,3 +9,6 @@ require_once get_template_directory() . '/inc/theme-filters.php';
 require get_template_directory() . '/inc/enqueue.php';
 // custom block editor 
 require_once get_template_directory() . '/inc/custom-block-editor.php';
+// class 
+require_once get_template_directory() . '/inc/class-my-custom-nav-walker.php';
+

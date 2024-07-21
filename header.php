@@ -36,6 +36,7 @@
                     array(
                         'theme_location' => 'primary',
                         'menu_id' => 'primary-menu',
+                        'walker' => new My_Custom_Nav_Walker(), // Tambahkan walker custom
                     )
                 );
                 ?>
@@ -65,6 +66,7 @@
                     array(
                         'theme_location' => 'primary',
                         'menu_id' => 'primary-menu',
+                        'walker' => new My_Custom_Nav_Walker(), // Tambahkan walker custom
                     )
                 );
                 ?>
