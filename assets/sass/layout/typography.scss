@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 100.8px;
+    color: $textcolor;
+
+    @media (max-width: 600px) {
+        font-size: 48px;
+        line-height: 100.8px;
+    }
+}
+
+body {
+    font-family: $secondary-font;
+    background-color: $dark;
+    color: $textcolor;
+}
+header {
+    font-family: $primary-font;
+}
