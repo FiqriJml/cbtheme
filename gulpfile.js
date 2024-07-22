@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 const browsersync = require('browser-sync').create();
@@ -17,6 +18,7 @@ function scssTask() {
     return src(paths.scss + '/*.scss', { sourcemaps: true })
         .pipe(concat('theme.scss')) // Menggabungkan semua file SCSS menjadi satu
         .pipe(sass().on('error', sass.logError))
+        .pipe(replace('../../fonts', '../../assets/fonts')) //replace for correct path on dist/*/*.css
         .pipe(rename('theme.css')) // Output theme.css
         .pipe(dest(paths.cssDest))
         .pipe(rename({ suffix: '.min' })) // Output theme.min.css dan theme.min.css.map
