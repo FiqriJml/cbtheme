@@ -480,6 +480,10 @@ button {
   font-weight: 500;
   background-color: #f4a4ec;
 }
+.hero .left button:hover {
+  background-color: #f373e6;
+  transition: background-color 0.3s;
+}
 @media (min-width: 1024px) {
   .hero .left button {
     font-size: 18px;

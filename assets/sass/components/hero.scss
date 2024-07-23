@@ -54,6 +54,11 @@
             font-weight: 500;
             background-color: $pink;
 
+            &:hover {
+                background-color: $dark-pink;
+                transition: background-color 0.3s;
+            }
+
             @include respond-to("medium") {
                 font-size: 18px;
             }
