@@ -18,3 +18,14 @@ function mytheme_setup()
     );
 }
 add_action('after_setup_theme', 'mytheme_setup');
+
+// Get and set data for gutenberg blocks
+function getData()
+{
+    return get_query_var('component_data', []);
+}
+
+function setData($data)
+{
+    return set_query_var('component_data', $data);
+}

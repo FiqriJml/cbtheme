@@ -1,3 +1,4 @@
+// variables.scss
 $dark: #121316;
 $dark-gray: #1f2126;
 $pink: #f4a4ec;
@@ -8,3 +9,12 @@ $green: #00b67a;
 $textcolor: white;
 $primary-font: "Chillax";
 $secondary-font: "Manrope";
+$font-size-h1: 48px;
+$font-size-h1-large: 62px;
+$font-size-h1-wide: 96px;
+
+$breakpoints: (
+    "medium": 1024px,
+    "large": 1440px,
+    "wide": 1920px
+);

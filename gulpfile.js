@@ -53,7 +53,7 @@ function browsersyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-    watch('*.php', browsersyncReload); // Reload saat file PHP berubah
+    watch('**/*.php', browsersyncReload); // Reload saat file PHP berubah
     watch([paths.scss + '/**/*.scss', paths.js + '/**/*.js'], series(scssTask, jsTask, browsersyncReload));
 }
 

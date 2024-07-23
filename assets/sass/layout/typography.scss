@@ -1,3 +1,6 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
 h1,
 h2,
 h3,
@@ -8,15 +11,20 @@ h6 {
     font-weight: 500;
 }
 
-h2 {
+h1 {
     font-weight: 500;
-    font-size: 96px;
-    line-height: 100.8px;
+    font-size: $font-size-h1;
+    line-height: 50px;
     color: $textcolor;
 
-    @media (max-width: 600px) {
-        font-size: 48px;
-        line-height: 100.8px;
+    @include respond-to("medium") {
+        font-size: $font-size-h1-large;
+        line-height: 70px;
+    }
+
+    @include respond-to("large") {
+        font-size: $font-size-h1-wide;
+        line-height: 100px;
     }
 }
 
@@ -27,4 +35,6 @@ body {
 }
 button {
     font-family: $primary-font;
+    padding: 1em 2em;
+    border-radius: 20em;
 }

@@ -1,0 +1,71 @@
+@import "../layout/variables.scss";
+@import "../layout/mixins.scss";
+
+.hero {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    .left {
+        padding-top: 3rem;
+        .heading {
+            .label {
+                display: flex;
+                position: relative;
+                white-space: nowrap;
+                div {
+                    display: flex;
+                    padding-left: 2rem;
+                    position: relative;
+                    top: -1.75rem;
+                    h1.price {
+                        display: inline-block;
+                        color: $pink;
+                        border: solid 1px white;
+                        border-radius: 32px;
+                        padding: 10px 24px;
+                    }
+                    p {
+                        border-radius: 20rem;
+                        line-height: 2.2;
+                        font-weight: 700;
+                        color: black;
+                        background-color: $gold;
+
+                        margin-top: -3em;
+                        padding: 0.5em;
+                        font-size: 14px;
+
+                        @include respond-to("medium") {
+                            font-size: 18px;
+                        }
+
+                        @include respond-to("large") {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        button {
+            font-size: 14px;
+            margin-top: 2em;
+            padding: 0.75em 2.5em;
+            font-weight: 500;
+            background-color: $pink;
+
+            @include respond-to("medium") {
+                font-size: 18px;
+            }
+
+            @include respond-to("large") {
+                font-size: 28px;
+            }
+        }
+    }
+    .right {
+        img {
+            width: 100%;
+        }
+    }
+}
