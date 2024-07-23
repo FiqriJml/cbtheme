@@ -11,9 +11,11 @@ function custom_block()
     Block::make(__('Hero'))
         ->add_fields(
             array(
-                Field::make('text', 'heading', __('Block Heading')),
-                Field::make('image', 'image', __('Block Image')),
-                Field::make('rich_text', 'content', __('Block Content')),
+                Field::make('image', 'image', __('Hero Image')),
+                Field::make('rich_text', 'heading', __('Hero Title')),
+                Field::make('text', 'text-price', __('Text Before Price')),
+                Field::make('text', 'pricing', __('Start Price')),
+                Field::make('text', 'tag-price', __('Tagline Price')),
             )
         )
         ->set_icon('star-filled')

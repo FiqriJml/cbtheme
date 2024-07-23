@@ -4,14 +4,22 @@ $data = getData();
 <div class="hero">
     <div class="left">
         <div class="heading">
-            <h1>Website plans</h1>
-            <h1>starting</h1>
+            <?php if (!empty($data['heading'])): ?>
+                <h1><?php echo $data['heading']; ?></h1>
+            <?php endif; ?>
             <div class="label">
-                <h1>from only</h1>
+                <?php if (!empty($data['text-price'])): ?>
+                    <h1><?php echo $data['text-price']; ?></h1>
+                <?php endif; ?>
                 <div>
-                    <h1 class="price">£350</h1>
+                    <?php if (!empty($data['pricing'])): ?>
+                        <h1 class="price"><?php echo $data['pricing']; ?></h1>
+                    <?php endif; ?>
                     <span>
-                        <p>OMG</p>
+                        <?php if (!empty($data['tag-price'])): ?>
+                            <p><?php echo $data['tag-price']; ?></p>
+                        <?php endif; ?>
+
                     </span>
                 </div>
             </div>
