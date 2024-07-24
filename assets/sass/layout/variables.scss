@@ -15,6 +15,8 @@ $font-size-h1-large: 62px;
 $font-size-h1-wide: 96px;
 
 $breakpoints: (
+    "mobile": 480px,
+    "tablet": 768px,
     "medium": 1024px,
     "large": 1440px,
     "wide": 1920px

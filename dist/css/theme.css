@@ -426,34 +426,34 @@ button {
 /**********************************/
 /*        COMPONENT STYLES        */
 /**********************************/
-.hero {
+.cta-wizard-banner {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
-.hero .left {
+.cta-wizard-banner .left {
   padding-top: 3rem;
 }
-.hero .left .heading .label {
+.cta-wizard-banner .left .heading .label {
   display: flex;
   position: relative;
   white-space: nowrap;
 }
-.hero .left .heading .label div {
+.cta-wizard-banner .left .heading .label div {
   display: flex;
   padding-left: 2rem;
   position: relative;
   top: -1.75rem;
 }
-.hero .left .heading .label div h1.price {
+.cta-wizard-banner .left .heading .label div h1.price {
   display: inline-block;
   color: #f4a4ec;
   border: solid 1px white;
   border-radius: 32px;
   padding: 10px 24px;
 }
-.hero .left .heading .label div p {
+.cta-wizard-banner .left .heading .label div p {
   border-radius: 20rem;
   line-height: 2.2;
   font-weight: 700;
@@ -464,16 +464,16 @@ button {
   font-size: 14px;
 }
 @media (min-width: 1024px) {
-  .hero .left .heading .label div p {
+  .cta-wizard-banner .left .heading .label div p {
     font-size: 18px;
   }
 }
 @media (min-width: 1440px) {
-  .hero .left .heading .label div p {
+  .cta-wizard-banner .left .heading .label div p {
     font-size: 24px;
   }
 }
-.hero .left button {
+.cta-wizard-banner .left button {
   font-size: 12px;
   margin-top: 1em;
   margin-bottom: 5em;
@@ -481,61 +481,61 @@ button {
   font-weight: 500;
   background-color: #f4a4ec;
 }
-.hero .left button:hover {
+.cta-wizard-banner .left button:hover {
   background-color: #f373e6;
   transition: background-color 0.3s;
 }
 @media (min-width: 1024px) {
-  .hero .left button {
+  .cta-wizard-banner .left button {
     font-size: 16px;
   }
 }
 @media (min-width: 1440px) {
-  .hero .left button {
+  .cta-wizard-banner .left button {
     font-size: 28px;
   }
 }
-.hero .left .content-banner {
+.cta-wizard-banner .left .content-banner {
   font-size: 20px;
 }
 @media (min-width: 1024px) {
-  .hero .left .content-banner {
+  .cta-wizard-banner .left .content-banner {
     font-size: 28px;
   }
 }
 @media (min-width: 1440px) {
-  .hero .left .content-banner {
+  .cta-wizard-banner .left .content-banner {
     font-size: 32px;
   }
 }
-.hero .left .content-banner p {
+.cta-wizard-banner .left .content-banner p {
   margin-bottom: 1em;
 }
-.hero .left .content-banner .tasks span {
+.cta-wizard-banner .left .content-banner .tasks span {
   font-size: 0.5em;
   margin-right: 1em;
 }
-.hero .left .content-banner .tasks span i {
+.cta-wizard-banner .left .content-banner .tasks span i {
   font-size: 1.375em;
   margin-right: 0.27em;
   color: #e2d26c;
 }
-.hero .left .content-banner .banner-footer {
+.cta-wizard-banner .left .content-banner .banner-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
   font-size: 0.75em;
   margin-top: 1em;
 }
-.hero .left .content-banner .banner-footer .rated,
-.hero .left .content-banner .banner-footer .review {
+.cta-wizard-banner .left .content-banner .banner-footer .rated,
+.cta-wizard-banner .left .content-banner .banner-footer .review {
   display: flex;
   align-items: center;
 }
-.hero .left .content-banner .banner-footer svg {
+.cta-wizard-banner .left .content-banner .banner-footer svg {
   width: 5.375em;
   margin-left: 0.5em;
 }
-.hero .right img {
+.cta-wizard-banner .right img {
   width: 100%;
 }

@@ -2,7 +2,7 @@
 $data = getData();
 $tasks = isset($data['tasks']) ? $data['tasks'] : array();
 ?>
-<div class="hero" style="background-image: url(<?php echo $data['bg_image']; ?>);">
+<div class="cta-wizard-banner" style="background-image: url(<?php echo $data['bg_image']; ?>);">
     <div class="left">
         <div class="heading">
             <?php if (!empty($data['heading'])): ?>

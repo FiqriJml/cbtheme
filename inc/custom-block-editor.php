@@ -7,6 +7,17 @@ use Carbon_Fields\Container;
 add_action('carbon_fields_register_fields', 'custom_block');
 function custom_block()
 {
+    // Hero Mobile Section
+    Block::make(__('Hero'))
+        ->add_fields(
+            array(
+                Field::make('text', 'Heading', __('Heading Title'))
+            )
+        )->set_icon('admin-appearance')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            setData($fields);
+            get_template_part('components/hero');
+        });
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
@@ -39,4 +50,5 @@ function custom_block()
         });
 
     // @end Banner
+
 }
