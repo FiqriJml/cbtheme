@@ -474,8 +474,8 @@ button {
   }
 }
 .hero .left button {
-  font-size: 14px;
-  margin-top: 2em;
+  font-size: 12px;
+  margin-top: 1em;
   padding: 0.75em 2.5em;
   font-weight: 500;
   background-color: #f4a4ec;
@@ -486,7 +486,7 @@ button {
 }
 @media (min-width: 1024px) {
   .hero .left button {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1440px) {
