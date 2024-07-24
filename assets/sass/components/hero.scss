@@ -1,0 +1,38 @@
+@import "../layout/variables.scss";
+@import "../layout/mixins.scss";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 1.1;
+    padding: 0 0.75em;
+    text-align: center;
+
+    @include respond-to("tablet") {
+        display: none;
+    }
+    @include respond-to("mobile") {
+        font-size: 38px;
+    }
+    h3 {
+        font-size: 0.7em;
+        margin: 1.8em 0;
+    }
+    .highlight {
+        color: $pink;
+    }
+    .tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        span {
+            font-size: 0.5em;
+            i {
+                font-size: 1.375em;
+                margin-right: 0.27em;
+                color: $green;
+            }
+        }
+    }
+}

@@ -105,12 +105,16 @@ body.freeze {
 }
 
 h1,
-h2,
+h2 {
+  font-family: "Chillax";
+  font-weight: 500;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Chillax";
+  font-family: "Manrope";
   font-weight: 500;
 }
 
@@ -428,9 +432,14 @@ button {
 /**********************************/
 .cta-wizard-banner {
   margin-top: 2rem;
-  display: flex;
   justify-content: center;
   padding: 1rem;
+  display: none;
+}
+@media (min-width: 769px) {
+  .cta-wizard-banner {
+    display: flex;
+  }
 }
 .cta-wizard-banner .left {
   padding-top: 3rem;
@@ -538,4 +547,43 @@ button {
 }
 .cta-wizard-banner .right img {
   width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  line-height: 1.1;
+  padding: 0 0.75em;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .hero {
+    display: none;
+  }
+}
+@media (min-width: 480px) {
+  .hero {
+    font-size: 38px;
+  }
+}
+.hero h3 {
+  font-size: 0.7em;
+  margin: 1.8em 0;
+}
+.hero .highlight {
+  color: #f4a4ec;
+}
+.hero .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.hero .tasks span {
+  font-size: 0.5em;
+}
+.hero .tasks span i {
+  font-size: 1.375em;
+  margin-right: 0.27em;
+  color: #00b67a;
 }
