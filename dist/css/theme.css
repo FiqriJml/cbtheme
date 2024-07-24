@@ -476,6 +476,7 @@ button {
 .hero .left button {
   font-size: 12px;
   margin-top: 1em;
+  margin-bottom: 5em;
   padding: 0.75em 2.5em;
   font-weight: 500;
   background-color: #f4a4ec;
@@ -493,6 +494,47 @@ button {
   .hero .left button {
     font-size: 28px;
   }
+}
+.hero .left .content-banner {
+  font-size: 20px;
+}
+@media (min-width: 1024px) {
+  .hero .left .content-banner {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero .left .content-banner {
+    font-size: 32px;
+  }
+}
+.hero .left .content-banner p {
+  margin-bottom: 1em;
+}
+.hero .left .content-banner .tasks span {
+  font-size: 0.5em;
+  margin-right: 1em;
+}
+.hero .left .content-banner .tasks span i {
+  font-size: 1.375em;
+  margin-right: 0.27em;
+  color: #e2d26c;
+}
+.hero .left .content-banner .banner-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  font-size: 0.75em;
+  margin-top: 1em;
+}
+.hero .left .content-banner .banner-footer .rated,
+.hero .left .content-banner .banner-footer .review {
+  display: flex;
+  align-items: center;
+}
+.hero .left .content-banner .banner-footer svg {
+  width: 5.375em;
+  margin-left: 0.5em;
 }
 .hero .right img {
   width: 100%;
