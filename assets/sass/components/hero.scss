@@ -8,6 +8,7 @@
     line-height: 1.1;
     padding: 0 0.75em;
     text-align: center;
+    align-items: center;
 
     @include respond-to("tablet") {
         display: none;
@@ -26,12 +27,39 @@
         display: flex;
         flex-direction: column;
         gap: 0.5em;
+        margin-bottom: 1.2em;
         span {
             font-size: 0.5em;
             i {
                 font-size: 1.375em;
                 margin-right: 0.27em;
                 color: $green;
+            }
+        }
+    }
+    button {
+        width: fit-content;
+        font-weight: 500;
+        font-size: 0.7em;
+        padding: 0.75em 2em;
+    }
+    img {
+        margin: 2em 0;
+        width: 100%;
+    }
+    .hero-footer {
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .rated,
+        .review {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            gap: 1em;
+            svg {
+                width: 6em;
             }
         }
     }
