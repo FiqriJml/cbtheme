@@ -1,0 +1,18 @@
+.process-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 1em;
+    img {
+        width: 100%;
+    }
+    .text-container {
+    }
+    .image-container {
+    }
+    @include respond-to("tablet") {
+        display: none;
+    }
+    @include respond-to("mobile") {
+        font-size: 38px;
+    }
+}

@@ -2,7 +2,7 @@
 @import "../layout/mixins.scss";
 
 .hero {
-    display: flex;
+    display: none;
     flex-direction: column;
     font-size: 24px;
     line-height: 1.1;
@@ -11,10 +11,11 @@
     align-items: center;
 
     @include respond-to("tablet") {
-        display: none;
+        display: flex;
+        font-size: 38px;
     }
     @include respond-to("mobile") {
-        font-size: 38px;
+        font-size: 24px;
     }
     h3 {
         font-size: 0.7em;

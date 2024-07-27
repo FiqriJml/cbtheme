@@ -20,14 +20,17 @@ h1 {
     line-height: 50px;
     color: $textcolor;
 
-    @include respond-to("medium") {
+    @include respond-to("wide") {
+        font-size: $font-size-h1-wide;
+        line-height: 100px;
+    }
+    @include respond-to("large") {
         font-size: $font-size-h1-large;
         line-height: 70px;
     }
-
-    @include respond-to("large") {
-        font-size: $font-size-h1-wide;
-        line-height: 100px;
+    @include respond-to("medium") {
+        font-size: $font-size-h1;
+        line-height: 50px;
     }
 }
 

@@ -6,9 +6,9 @@
     justify-content: center;
     padding: 1rem;
 
-    display: none;
+    display: flex;
     @include respond-to("tablet") {
-        display: flex;
+        display: none;
     }
     .left {
         padding-top: 3rem;
@@ -38,26 +38,26 @@
 
                         margin-top: -3em;
                         padding: 0.5em;
-                        font-size: 14px;
+                        font-size: 24px;
 
                         @include respond-to("medium") {
                             font-size: 18px;
                         }
 
-                        @include respond-to("large") {
-                            font-size: 24px;
+                        @include respond-to("tablet") {
+                            font-size: 14px;
                         }
                     }
                 }
             }
         }
         button {
-            font-size: 12px;
             margin-top: 1em;
             margin-bottom: 5em;
             padding: 0.75em 2.5em;
             font-weight: 500;
             background-color: $pink;
+            font-size: 28px;
 
             &:hover {
                 background-color: $dark-pink;
@@ -67,19 +67,18 @@
             @include respond-to("medium") {
                 font-size: 16px;
             }
-
-            @include respond-to("large") {
-                font-size: 28px;
+            @include respond-to("tablet") {
+                font-size: 12px;
             }
         }
         .content-banner {
-            font-size: 20px;
+            font-size: 28px;
             @include respond-to("medium") {
-                font-size: 28px;
+                font-size: 20px;
             }
 
-            @include respond-to("large") {
-                font-size: 32px;
+            @include respond-to("tablet") {
+                font-size: 18px;
             }
             p {
                 margin-bottom: 1em; // Margin mengikuti ukuran font dari .content-banner

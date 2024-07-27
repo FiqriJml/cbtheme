@@ -71,6 +71,22 @@ function custom_block()
             setData($fields);
             get_template_part('components/logo-carousel');
         });
+    //@end Logo Carousell
+    // process section
+    Block::make(__('Process Section'))
+        ->add_fields(
+            array(
+                Field::make('image', 'image', __('Logo Carousel')),
+            )
+        )
+        ->set_icon('forms')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            // Convert image IDs to URLs
+            $fields['image'] = wp_get_attachment_image_url($fields['image'], 'full');
+            setData($fields);
+            get_template_part('components/process-section');
+        });
+    // @end process section
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
