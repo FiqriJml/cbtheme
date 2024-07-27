@@ -638,19 +638,57 @@ button {
 
 .process-section {
   display: flex;
-  flex-direction: column-reverse;
-  padding: 0 1em;
+  padding: 0 0.5em;
+  margin-bottom: 1em;
 }
 .process-section img {
   width: 100%;
 }
+.process-section .text-container .head {
+  display: flex;
+  margin-bottom: 0.75em;
+}
+.process-section .text-container .head span {
+  margin-top: -0.7em;
+}
+.process-section .text-container .head span p {
+  border-radius: 20rem;
+  line-height: 2.2;
+  font-weight: 700;
+  color: black;
+  background-color: #e2d26c;
+  padding: 0.5em;
+  font-size: 0.4em;
+}
+.process-section .text-container .tasks {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.process-section .text-container .tasks .task {
+  display: flex;
+  align-items: center;
+}
+.process-section .text-container .tasks i {
+  margin-right: 1em;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.6em;
+  border-radius: 20rem;
+  color: #f4a4ec;
+  background-color: #1f2126;
+}
+.process-section .text-container .foot {
+  margin-top: 0.5em;
+}
+.process-section .image-container {
+  margin-bottom: 1.5em;
+}
 @media (max-width: 768px) {
   .process-section {
-    display: none;
-  }
-}
-@media (max-width: 480px) {
-  .process-section {
     font-size: 38px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

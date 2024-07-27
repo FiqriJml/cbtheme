@@ -76,7 +76,13 @@ function custom_block()
     Block::make(__('Process Section'))
         ->add_fields(
             array(
-                Field::make('image', 'image', __('Logo Carousel')),
+                Field::make('image', 'image', __('Image Theme')),
+                Field::make('complex', 'tasks', __('Tasks'))
+                    ->add_fields(
+                        array(
+                            Field::make('text', 'task', __('Task'))
+                        )
+                    ),
             )
         )
         ->set_icon('forms')

@@ -1,18 +1,60 @@
+@import "../layout/variables.scss";
+
 .process-section {
     display: flex;
-    flex-direction: column-reverse;
-    padding: 0 1em;
+    padding: 0 0.5em;
+    margin-bottom: 1em;
     img {
         width: 100%;
     }
     .text-container {
+        .head {
+            display: flex;
+            margin-bottom: 0.75em;
+            span {
+                margin-top: -0.7em;
+                p {
+                    border-radius: 20rem;
+                    line-height: 2.2;
+                    font-weight: 700;
+                    color: black;
+                    background-color: $gold;
+                    padding: 0.5em;
+                    font-size: 0.4em;
+                }
+            }
+        }
+        .tasks {
+            font-size: 0.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .task {
+                display: flex;
+                align-items: center;
+            }
+
+            i {
+                margin-right: 1em;
+                font-size: 1.2em;
+                line-height: 1;
+                padding: 0.6em;
+                border-radius: 20rem;
+                color: $pink;
+                background-color: $dark-gray;
+            }
+        }
+        .foot {
+            margin-top: 0.5em;
+        }
     }
     .image-container {
+        margin-bottom: 1.5em;
     }
     @include respond-to("tablet") {
-        display: none;
-    }
-    @include respond-to("mobile") {
         font-size: 38px;
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
