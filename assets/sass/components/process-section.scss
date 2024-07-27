@@ -2,17 +2,25 @@
 
 .process-section {
     display: flex;
-    padding: 0 0.5em;
+    padding: 1em;
+    justify-content: center;
     margin-bottom: 1em;
+    font-size: $font-size-h1-wide;
+    gap: 1em;
     img {
         width: 100%;
     }
     .text-container {
         .head {
+            font-size: 1em;
             display: flex;
-            margin-bottom: 0.75em;
+            margin-bottom: 0.5em;
+            h1 {
+                font-size: 1em;
+                text-wrap: nowrap;
+            }
             span {
-                margin-top: -0.7em;
+                margin-top: -0.4em;
                 p {
                     border-radius: 20rem;
                     line-height: 2.2;
@@ -20,12 +28,12 @@
                     color: black;
                     background-color: $gold;
                     padding: 0.5em;
-                    font-size: 0.4em;
+                    font-size: 0.3em;
                 }
             }
         }
         .tasks {
-            font-size: 0.5em;
+            font-size: 0.25em;
             display: flex;
             flex-direction: column;
             gap: 1em;
@@ -44,11 +52,18 @@
                 color: $pink;
                 background-color: $dark-gray;
             }
+
+            @include respond-to("tablet") {
+                font-size: 0.4em;
+            }
+            @include respond-to("mobile") {
+                font-size: 0.25em;
+            }
         }
         .foot {
-            margin-top: 0.5em;
+            // margin-top: 0.5em;
             a {
-                font-size: 0.5em;
+                font-size: 0.25em;
                 font-family: $primary-font;
                 font-weight: 500;
                 padding: 0.7em 1.4em;
@@ -56,15 +71,23 @@
                 color: $dark;
                 border-radius: 20rem;
                 text-decoration: none;
+
+                @include respond-to("tablet") {
+                    font-size: 0.4em;
+                }
+                @include respond-to("mobile") {
+                    font-size: 0.25em;
+                }
             }
         }
     }
-    .image-container {
-        margin-bottom: 1.5em;
+    @include respond-to("large") {
+        font-size: $font-size-h1-large;
     }
     @include respond-to("tablet") {
-        font-size: 38px;
+        font-size: $font-size-h1-large;
         display: flex;
         flex-direction: column-reverse;
+        padding: 0 0.5em;
     }
 }
