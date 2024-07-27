@@ -20,7 +20,7 @@ $tasks = $data["tasks"];
             </div>
         </div>
         <div class="foot">
-            <button>View Products</button>
+            <button>View Products&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
         </div>
     </div>
     <div class="image-container">

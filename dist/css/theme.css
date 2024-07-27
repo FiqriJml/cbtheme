@@ -682,6 +682,11 @@ button {
 .process-section .text-container .foot {
   margin-top: 0.5em;
 }
+.process-section .text-container .foot button {
+  font-size: 0.5em;
+  font-weight: 500;
+  padding: 0.7em 1.4em;
+}
 .process-section .image-container {
   margin-bottom: 1.5em;
 }
