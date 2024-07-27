@@ -1,0 +1,11 @@
+#logo-carousel {
+    margin: 4em 0;
+    width: 100%;
+    .splide__slide {
+        margin: 0 3em;
+        img {
+            width: 100%; /* Atur lebar gambar sesuai dengan ukuran kontainer */
+            height: auto;
+        }
+    }
+}

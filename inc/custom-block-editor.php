@@ -4,6 +4,19 @@ use Carbon_Fields\Field;
 use Carbon_Fields\Container;
 
 
+if (!function_exists('highlight_text')) {
+    // Function to highlight words
+    function highlight_text($text, $words)
+    {
+        foreach ($words as $word) {
+            if (!empty($word)) {
+                $text = str_replace($word, "<span class='highlight'>{$word}</span>", $text);
+            }
+        }
+        return $text;
+    }
+}
+
 add_action('carbon_fields_register_fields', 'custom_block');
 function custom_block()
 {
@@ -35,16 +48,6 @@ function custom_block()
             // Convert the highlighted words into an array
             $highlight_words_array = array_map('trim', explode(',', $highlight_words));
 
-            // Function to highlight words
-            function highlight_text($text, $words)
-            {
-                foreach ($words as $word) {
-                    if (!empty($word)) {
-                        $text = str_replace($word, "<span class='highlight'>{$word}</span>", $text);
-                    }
-                }
-                return $text;
-            }
             // Apply highlighting
             $heading = highlight_text($heading, $highlight_words_array);
 
@@ -54,6 +57,20 @@ function custom_block()
             get_template_part('components/hero');
         });
     // @end Hero
+    // Logo Carousell
+    Block::make(__('Logo Carousell'))
+        ->add_fields(
+            array(
+                Field::make('image', 'image', __('Logo Carousel')),
+            )
+        )
+        ->set_icon('admin-generic')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            // Convert image IDs to URLs
+            $fields['image'] = wp_get_attachment_image_url($fields['image'], 'full');
+            setData($fields);
+            get_template_part('components/logo-carousel');
+        });
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
