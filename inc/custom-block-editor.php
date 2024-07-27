@@ -76,6 +76,10 @@ function custom_block()
     Block::make(__('Process Section'))
         ->add_fields(
             array(
+                Field::make('text', 'heading', __('Heading Title')),
+                Field::make('text', 'tag', __('Heading Tag')),
+                Field::make('text', 'btn_text', __('Button Text')),
+                Field::make('text', 'btn_url', __('Button url')),
                 Field::make('image', 'image', __('Image Theme')),
                 Field::make('complex', 'tasks', __('Tasks'))
                     ->add_fields(

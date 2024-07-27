@@ -1,14 +1,20 @@
 <?php
 $data = getData();
-$tasks = $data["tasks"];
+$tasks = $data["tasks"] ?? null;
+$heading = $data["heading"] ?? null;
+$tag = strtoupper($data["tag"] ?? '');
+$image = $data["image"] ?? null;
+$btn_text = $data["btn_text"] ?? null;
+$btn_url = $data["btn_url"] ?? null;
+
 ?>
 <div class="process-section">
     <div class="text-container">
         <div class="head">
-            <h1>Our sites</h1>
+            <h1><?= $heading ?></h1>
             <span>
                 <p>
-                    NEW
+                    <?= $tag ?>
                 </p>
             </span>
         </div>
@@ -20,7 +26,7 @@ $tasks = $data["tasks"];
             </div>
         </div>
         <div class="foot">
-            <button>View Products&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+            <a href="<?= $btn_url ?>"><?= $btn_text ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
         </div>
     </div>
     <div class="image-container">

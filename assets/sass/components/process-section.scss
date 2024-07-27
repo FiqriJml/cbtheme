@@ -47,10 +47,15 @@
         }
         .foot {
             margin-top: 0.5em;
-            button {
+            a {
                 font-size: 0.5em;
+                font-family: $primary-font;
                 font-weight: 500;
                 padding: 0.7em 1.4em;
+                background-color: white;
+                color: $dark;
+                border-radius: 20rem;
+                text-decoration: none;
             }
         }
     }
