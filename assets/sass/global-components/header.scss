@@ -3,6 +3,13 @@
 // import layout variables
 @import "../layout/variables.scss";
 
+.menu-icon {
+    width: 16px; /* Ubah sesuai kebutuhan Anda */
+    height: 16px; /* Ubah sesuai kebutuhan Anda */
+    margin-right: 8px; /* Ubah sesuai kebutuhan Anda */
+    // vertical-align: middle; /* Supaya ikon berada di tengah */
+}
+
 .site-header {
     background-color: $dark;
     color: white;
@@ -20,14 +27,12 @@
                 width: 100px;
             }
         }
+
         .main-navigation {
             display: flex;
             justify-content: center;
             flex-grow: 1;
 
-            @media (max-width: 768px) {
-                display: none;
-            }
             #primary-menu {
                 list-style: none;
                 display: flex;
@@ -36,7 +41,8 @@
                 align-items: center;
                 li {
                     position: relative; // For positioning submenu
-
+                    display: flex;
+                    align-items: center;
                     // Add arrow for items with submenu
                     &:has(ul.sub-menu) > a::after {
                         content: "";
@@ -64,6 +70,9 @@
                     ul.sub-menu {
                         display: none;
                         position: absolute;
+                        align-items: left;
+                        top: 0;
+                        z-index: 99;
                         background-color: $dark-gray;
                         list-style: none;
                         padding: 0.5rem;
@@ -73,6 +82,9 @@
                         padding: 0;
 
                         li {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start; /* Mengatur elemen-elemen agar sejajar ke kiri */
                             margin-left: 0;
                             font-size: 18px;
                             cursor: pointer;
@@ -112,9 +124,6 @@
             align-items: center;
             margin-left: auto;
 
-            @media (max-width: 768px) {
-                display: none;
-            }
             button {
                 background: none;
                 color: white;
@@ -162,7 +171,7 @@
             line-height: 0rem;
             cursor: pointer;
 
-            @media (max-width: 768px) {
+            @include respond-to("medium") {
                 display: block;
             }
 
@@ -174,6 +183,13 @@
             &:hover {
                 color: $pink;
                 transition: color 0.3s;
+            }
+        }
+
+        .header-buttons,
+        .main-navigation {
+            @include respond-to("medium") {
+                display: none;
             }
         }
     }
@@ -229,10 +245,11 @@
                     color: $pink;
                     transition: color 0.3s;
                 }
+                a {
+                    flex-grow: 1;
+                }
                 &:has(ul.sub-menu) {
                     > a {
-                        flex-grow: 1; // Make sure the anchor tag takes the available space
-
                         &::after {
                             content: "";
                             display: inline-block;
