@@ -730,3 +730,16 @@ button {
     padding: 0 0.5em;
   }
 }
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+#gallery-carousel {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  background-color: white;
+}

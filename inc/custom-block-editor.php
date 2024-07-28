@@ -97,6 +97,25 @@ function custom_block()
             get_template_part('components/process-section');
         });
     // @end process section
+    // gallery caraousel
+    Block::make(__('gallery caraousel'))
+        ->add_fields(
+            array(
+                Field::make('complex', 'images', __('Tasks'))
+                    ->add_fields(
+                        array(
+                            Field::make('image', 'image', __('Image'))
+                                ->set_value_type('url')
+                        )
+                    ),
+            )
+        )
+        ->set_icon('images')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            setData($fields);
+            get_template_part('components/gallery');
+        });
+    // @end gallery caraousel
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
