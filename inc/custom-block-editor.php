@@ -110,7 +110,7 @@ function custom_block()
                     ),
             )
         )
-        ->set_icon('images')
+        ->set_icon('admin-media')
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
             setData($fields);
             get_template_part('components/gallery');
