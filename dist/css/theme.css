@@ -236,6 +236,9 @@ button {
 .site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li a {
   padding: 0;
 }
+.site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li:hover {
+  background-color: black;
+}
 .site-header .header-desktop .main-navigation #primary-menu li ul.sub-menu li:hover > a {
   color: #f4a4ec;
   transition: color 0.3s;
