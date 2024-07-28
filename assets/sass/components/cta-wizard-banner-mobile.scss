@@ -1,0 +1,52 @@
+@import "../layout/variables.scss";
+
+.cta-wizard-banner-mobile {
+    padding: 0 1em;
+    display: none;
+    @include respond-to("tablet") {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        font-size: $font-size-h1;
+        .label {
+            display: flex;
+            align-items: center;
+            margin-top: 0.25em;
+            gap: 0.25em;
+            .pricing {
+                font-family: $primary-font;
+                color: $pink;
+                border: solid white 1px;
+                border-radius: 20px;
+                padding: 0.09em 0.4em;
+            }
+            .tag-price {
+                font-size: 0.45em;
+                font-weight: 500;
+                line-height: 2.2;
+                background-color: $gold;
+                color: black;
+                border-radius: 20rem;
+                padding: 0.4em;
+            }
+        }
+        a {
+            margin: 1em 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border-radius: 20rem;
+            padding: 0.75em 2em;
+            width: fit-content;
+        }
+    }
+}

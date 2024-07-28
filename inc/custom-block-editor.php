@@ -132,6 +132,28 @@ function custom_block()
             get_template_part('components/text-to-highlight');
         });
     // @end Text to Highlight
+    // CTA Wizard Banner MOBILE
+    Block::make(__('CTA Wizard Banner Mobile'))
+        ->add_fields(
+            array(
+                Field::make('image', 'image', __('Banner Image'))
+                    ->set_value_type('url'),
+                Field::make('image', 'bg_image', __('Background Image'))
+                    ->set_value_type('url'),
+                Field::make('rich_text', 'heading', __('Banner Title')),
+                Field::make('text', 'pricing', __('Start Price')),
+                Field::make('text', 'tag_price', __('Tagline Price')),
+                Field::make('text', 'btn_text', __('Button Text')),
+                Field::make('text', 'btn_url', __('Button Url'))
+            )
+        )
+        ->set_icon('star-filled')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            setData($fields);
+            get_template_part('components/cta-wizard-banner-mobile');
+        });
+
+    // @end CTA Wizard Banner MOBILE
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
