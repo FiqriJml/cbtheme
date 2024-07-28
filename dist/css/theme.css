@@ -743,3 +743,20 @@ button {
   margin-bottom: 2em;
   background-color: white;
 }
+
+.text-to-highlight {
+  padding: 6em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.text-to-highlight strong {
+  font-weight: 500;
+  color: #f4a4ec;
+}
+@media (max-width: 768px) {
+  .text-to-highlight {
+    display: none;
+  }
+}

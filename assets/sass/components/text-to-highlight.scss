@@ -1,0 +1,17 @@
+@import "../layout/variables.scss";
+
+.text-to-highlight {
+    padding: 6em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    strong {
+        font-weight: 500;
+        color: $pink;
+    }
+    @include respond-to("tablet") {
+        display: none;
+    }
+}

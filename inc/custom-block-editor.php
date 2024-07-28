@@ -116,6 +116,22 @@ function custom_block()
             get_template_part('components/gallery');
         });
     // @end gallery caraousel
+    // Text to Highlight
+    Block::make(__('Text to Highlight'))
+        ->add_fields(
+            array(
+                Field::make('rich_text', 'heading', __('Heading Text'))
+                    ->help_text(__('To highlight the word, bold the word')),
+                Field::make('image', 'bg_image', __('Background Image'))
+                    ->set_value_type('url')
+            )
+        )
+        ->set_icon('media-text')
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            setData($fields);
+            get_template_part('components/text-to-highlight');
+        });
+    // @end Text to Highlight
     // CTA Wizard Banner section
     Block::make(__('CTA Wizard Banner'))
         ->add_fields(
